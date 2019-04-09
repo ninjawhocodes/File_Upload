@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url : jdbc:postgresql://localhost:5433/postgres
+    username: postgres
+    password: password
+    initialization-mode: NEVER
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update 
+    database: postgresql
+    properties:
+      hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+      hibernate.default_schema: master
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 210MB
+      file-size-threshold: 200MB
+        
